@@ -1,10 +1,13 @@
+import { createNavigationContainerRef, NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { setRootNavigation } from './NavigationService';
 import RootStack from './Stacks/RootStack';
 
 function RootNavigator(props) {
+  const NavigationService = createNavigationContainerRef();
+  setRootNavigation(NavigationService);
   return (
-    <NavigationContainer {...props}>
+    <NavigationContainer ref={NavigationService} {...props}>
       <RootStack />
     </NavigationContainer>
   );

@@ -1,13 +1,19 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen } from '../../Screens';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+import { NAVIGATION_SCREEN } from '../../Config/NavigationConstant';
+import DrawerStack from './DrawerStack';
 
 const Stack = createStackNavigator();
 
 function RootStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Navigator
+      screenOptions={{
+        gestureEnabled: false,
+        headerShown: false,
+        ...TransitionPresets.SlideFromRightIOS,
+      }}>
+      <Stack.Screen name={NAVIGATION_SCREEN.drawerStack} component={DrawerStack} />
     </Stack.Navigator>
   );
 }

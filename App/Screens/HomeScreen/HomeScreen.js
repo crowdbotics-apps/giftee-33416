@@ -1,14 +1,17 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { MainWrapper } from '../../Components';
 
 function HomeScreen() {
+  const navigation = useNavigation();
+
   return (
-    <SafeAreaView>
+    <MainWrapper headerTitle="Gift results for Jon">
       <View>
         <Text>Home</Text>
       </View>
-    </SafeAreaView>
+    </MainWrapper>
   );
 }
 

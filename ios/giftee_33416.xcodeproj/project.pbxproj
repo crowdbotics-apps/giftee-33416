@@ -104,7 +104,6 @@
 				A9DF960049F9720B50E73D6D /* Pods-giftee_33416-giftee_33416Tests.debug.xcconfig */,
 				44EA96A9AB068D56CE34102D /* Pods-giftee_33416-giftee_33416Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

@@ -1,3 +1,4 @@
-import { HomeScreen } from './HomeScreen';
-
-export { HomeScreen };
+export * from './HomeScreen';
+export * from './LoginScreen';
+export * from './PrivacyScreen';
+export * from './TermScreen';
