@@ -11,8 +11,10 @@ const NAVIGATION_SCREEN = {
   homeScreen: 'HomeScreen',
   drawerStack: 'DrawerStack',
   loginScreen: 'LoginScreen',
-  privacyScreen: 'PrivacyScreen',
   primaryStack: 'PrimaryStack',
+  privacyScreen: 'PrivacyScreen',
+  homeGridScreen: 'HomeGridScreen',
+  homeSwipeScreen: 'HomeSwipeScreen',
 };
 
 const SIDE_MENU = [

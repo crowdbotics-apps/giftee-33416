@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../Theme';
 
 const styles = StyleSheet.create({
   outerView: {
@@ -46,11 +47,6 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 15,
   },
-  //   closeView: {
-  //     position: 'absolute',
-  //     top: 70,
-  //     left: 50,
-  //   },
 });
 
 export default styles;
