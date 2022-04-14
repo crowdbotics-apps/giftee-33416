@@ -1,1 +1,2 @@
-export { default as HomeScreen } from './HomeScreen';
+export * from './GridMode';
+export * from './SwipeMode';

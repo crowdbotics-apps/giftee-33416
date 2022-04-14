@@ -4,9 +4,10 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import Animated, { Extrapolate, interpolate, useAnimatedStyle } from 'react-native-reanimated';
 import SimpleHeader from '../../Components/Header/SimpleHeader/SimpleHeader';
-import { NAVIGATION_SCREEN } from '../../Config/NavigationConstant';
-import { HomeScreen, LoginScreen, PrivacyScreen, TermScreen } from '../../Screens';
+import { ICONS_NAME, NAVIGATION_SCREEN } from '../../Config/NavigationConstant';
+import { LoginScreen, PrivacyScreen, TermScreen } from '../../Screens';
 import { COLORS } from '../../Theme';
+import HomeStack from './HomeStack';
 import styles from './styles';
 
 const NavigationStack = createStackNavigator();
@@ -54,9 +55,12 @@ function PrimaryStack() {
       <Animated.View style={[styles.animatedView, animatedStyle]}>
         <NavigationStack.Navigator
           screenOptions={{
-            header: () => <SimpleHeader headerTitle={'Gift results for Jon'} />,
+            header: () => <SimpleHeader headerTitle={'Gift results for Jon'} leftIcon={ICONS_NAME.DRAWER} />,
+            cardStyle: {
+              backgroundColor: COLORS.primary,
+            },
           }}>
-          <NavigationStack.Screen name={NAVIGATION_SCREEN.homeScreen} component={HomeScreen} />
+          <NavigationStack.Screen name={NAVIGATION_SCREEN.homeScreen} component={HomeStack} />
           <NavigationStack.Screen name={NAVIGATION_SCREEN.loginScreen} component={LoginScreen} />
           <NavigationStack.Screen name={NAVIGATION_SCREEN.privacyScreen} component={PrivacyScreen} />
           <NavigationStack.Screen name={NAVIGATION_SCREEN.termScreen} component={TermScreen} />

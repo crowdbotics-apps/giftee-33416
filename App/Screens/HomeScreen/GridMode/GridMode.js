@@ -1,9 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { MainWrapper } from '../../Components';
+import { MainWrapper } from '../../../Components';
 
-function HomeScreen() {
+function GridMode() {
   const navigation = useNavigation();
 
   return (
@@ -15,4 +15,4 @@ function HomeScreen() {
   );
 }
 
-export default React.memo(HomeScreen);
+export default React.memo(GridMode);
