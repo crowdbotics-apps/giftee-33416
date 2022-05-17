@@ -17,7 +17,7 @@ function MainWrapper({ headerTitle = '', children, leftIcon }) {
   }, []);
 
   return (
-    <SafeAreaView edges={['bottom']} style={[styles.flex, styles.background]}>
+    <SafeAreaView edges={['bottom', 'left', 'right']} style={[styles.flex, styles.background]}>
       <View style={[styles.flex, styles.background, styles.scrollContent]}>{children}</View>
     </SafeAreaView>
   );

@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../Theme';
 
 const styles = StyleSheet.create({
   flex: {
@@ -15,9 +16,16 @@ const styles = StyleSheet.create({
   spinnerBackground: {
     ...StyleSheet.absoluteFillObject,
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.4)',
+    backgroundColor: 'rgba(0,0,0,0.1)',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  logoContainer: {
+    minWidth: 100,
+    minHeight: 100,
+    justifyContent: 'center',
+    backgroundColor: COLORS.PinkishWhite,
+    borderRadius: 10,
   },
 });
 

@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
   activeColor: {
     color: COLORS.seconday,
   },
+  inActiveColor: {
+    color: COLORS.rippleColor,
+  },
   indicator: {
     position: 'absolute',
     left: 0,

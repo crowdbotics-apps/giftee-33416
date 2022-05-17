@@ -16,6 +16,7 @@ function HomeStack() {
         ...Alignment.MTxLarge,
       }}
       screenOptions={{
+        swipeEnabled: false,
         tabBarAllowFontScaling: false,
         tabBarActiveTintColor: COLORS.seconday,
         tabBarInactiveTintColor: COLORS.primaryText,
