@@ -5,7 +5,17 @@ import { StatusBar } from 'react-native';
 import Animated, { Extrapolate, interpolate, useAnimatedStyle } from 'react-native-reanimated';
 import SimpleHeader from '../../Components/Header/SimpleHeader/SimpleHeader';
 import { ICONS_NAME, NAVIGATION_SCREEN } from '../../Config/NavigationConstant';
-import { LoginScreen, PrivacyScreen, TermScreen } from '../../Screens';
+import {
+  AdditionalRegister,
+  FilterScreen,
+  HistoryScreen,
+  LoginScreen,
+  PrivacyScreen,
+  RegisterScreen,
+  SplashScreen,
+  TermScreen,
+} from '../../Screens';
+import { SpecificHistoryScreen } from '../../Screens/History';
 import { COLORS } from '../../Theme';
 import HomeStack from './HomeStack';
 import styles from './styles';
@@ -54,6 +64,7 @@ function PrimaryStack() {
       <Animated.View style={[styles.innerView, AnimatedInnerSlide]} />
       <Animated.View style={[styles.animatedView, animatedStyle]}>
         <NavigationStack.Navigator
+          initialRouteName={NAVIGATION_SCREEN.splashScreen}
           screenOptions={{
             header: () => <SimpleHeader headerTitle={'Gift results for Jon'} leftIcon={ICONS_NAME.DRAWER} />,
             cardStyle: {
@@ -61,9 +72,17 @@ function PrimaryStack() {
             },
           }}>
           <NavigationStack.Screen name={NAVIGATION_SCREEN.homeScreen} component={HomeStack} />
-          <NavigationStack.Screen name={NAVIGATION_SCREEN.loginScreen} component={LoginScreen} />
-          <NavigationStack.Screen name={NAVIGATION_SCREEN.privacyScreen} component={PrivacyScreen} />
           <NavigationStack.Screen name={NAVIGATION_SCREEN.termScreen} component={TermScreen} />
+          <NavigationStack.Screen name={NAVIGATION_SCREEN.loginScreen} component={LoginScreen} />
+          <NavigationStack.Screen name={NAVIGATION_SCREEN.filterScreen} component={FilterScreen} />
+          <NavigationStack.Screen name={NAVIGATION_SCREEN.historyScreen} component={HistoryScreen} />
+          <NavigationStack.Screen name={NAVIGATION_SCREEN.privacyScreen} component={PrivacyScreen} />
+          <NavigationStack.Screen name={NAVIGATION_SCREEN.specificHistoryScreen} component={SpecificHistoryScreen} />
+          <NavigationStack.Group screenOptions={{ headerShown: false }}>
+            <NavigationStack.Screen name={NAVIGATION_SCREEN.splashScreen} component={SplashScreen} />
+            <NavigationStack.Screen name={NAVIGATION_SCREEN.registerScreen} component={RegisterScreen} />
+            <NavigationStack.Screen name={NAVIGATION_SCREEN.AdditionalRegister} component={AdditionalRegister} />
+          </NavigationStack.Group>
         </NavigationStack.Navigator>
       </Animated.View>
     </React.Fragment>

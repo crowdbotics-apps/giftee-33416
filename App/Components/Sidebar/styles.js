@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   drawerItem: {
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
   },
   textView: {
     backgroundColor: 'red',

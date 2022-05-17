@@ -1,10 +1,12 @@
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+import React from 'react';
 import { Pressable } from 'react-native';
+import ChevronLeft from '../../../Assest/Svg/ChevronLeft';
+import CloseIcon from '../../../Assest/Svg/CloseIcon';
+import MenuIcon from '../../../Assest/Svg/MenuIcon';
 import { ICONS_NAME } from '../../../Config/NavigationConstant';
 import { COLORS } from '../../../Theme';
 import styles from './styles';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import React from 'react';
 
 function HeaderLeft(props) {
   const navigation = useNavigation();
@@ -24,19 +26,8 @@ function HeaderLeft(props) {
             styles.leftButton,
             props.style,
           ]}>
-          <Ionicons name="chevron-back-outline" size={25} color={COLORS.seconday} />
+          <ChevronLeft />
         </Pressable>
-        // <TouchableOpacity
-        //   activeOpacity={0.5}
-        //   style={[styles.editBtn, props.style]}
-        //   onPress={debounce(() => navigation.navigate(NAVIGATION_SCREENS.signIn), 1000, {
-        //     leading: true,
-        //     trailing: false,
-        //   })}>
-        //   <TextDefault upperCase bold small textColor={styles.loginBtnText}>
-        //     {t(ICONS_NAME.LOGIN)}
-        //   </TextDefault>
-        // </TouchableOpacity>
       );
     case ICONS_NAME.CROSS:
       return (
@@ -52,7 +43,7 @@ function HeaderLeft(props) {
             styles.leftButton,
             props.style,
           ]}>
-          <Ionicons name="ios-menu" size={30} color={COLORS.primaryText} />
+          <CloseIcon />
         </Pressable>
       );
 
@@ -70,7 +61,7 @@ function HeaderLeft(props) {
             styles.leftButton,
             props.style,
           ]}>
-          <Ionicons name="menu-outline" size={30} color={COLORS.seconday} />
+          <MenuIcon />
         </Pressable>
       );
   }

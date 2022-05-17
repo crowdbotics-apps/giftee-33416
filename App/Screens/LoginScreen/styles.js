@@ -39,6 +39,14 @@ const styles = StyleSheet.create({
     ...Fonts.style.description,
     ...fontFamily.Bold,
   },
+  bottomImage: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    left: 0,
+    alignItems: 'center',
+    zIndex: -1,
+  },
 });
 
 export default styles;
