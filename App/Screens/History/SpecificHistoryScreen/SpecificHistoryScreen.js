@@ -1,55 +1,14 @@
-import { useNavigation } from '@react-navigation/native';
 import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import GiftBig from '../../../Assest/Svg/GiftBig';
 import GiftSmall from '../../../Assest/Svg/GiftSmall';
-import { GridList, MainWrapper, LoadingLogo, TextDefault } from '../../../Components';
+import { GridList, LoadingLogo, MainWrapper, TextDefault } from '../../../Components';
+import { ITEM_LIST } from '../../../Config/MockData';
 import { ICONS_NAME } from '../../../Config/NavigationConstant';
 import { Alignment } from '../../../Theme';
 import styles from './styles';
 
-const DATA_LIST = [
-  {
-    id: 0,
-    title: 'Product Title',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 1,
-    title: 'Product Title',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 2,
-    title: 'Product Title',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 3,
-    title: 'Product Title',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 4,
-    title: 'Product Title',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 5,
-    title: 'Product Title',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-];
-
 function SpecificHistoryScreen() {
-  const navigation = useNavigation();
-
   const headerView = useMemo(
     () => (
       <TextDefault medium style={styles.headerTitle}>
@@ -64,7 +23,7 @@ function SpecificHistoryScreen() {
       <GridList
         isHistory
         flatListProps={{
-          data: DATA_LIST,
+          data: ITEM_LIST,
           ListHeaderComponent: headerView,
         }}
       />
