@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   },
   inputName: {
     color: COLORS.seconday,
+    marginTop: 10,
   },
   inputRow: {
     flexDirection: 'row',

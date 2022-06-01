@@ -10,6 +10,7 @@ import { ColoredButton, TextDefault } from '../../Components';
 import { NAVIGATION_SCREEN } from '../../Config/NavigationConstant';
 import { Alignment } from '../../Theme';
 import { FONTS_NAME } from '../../Theme/Fonts';
+import { itemsOccasion, itemsAge, itemsSex, itemsFamily } from './data';
 import styles from './styles';
 
 const isAndroid = Platform.OS === 'android';
@@ -19,10 +20,7 @@ function RegisterScreen() {
   const [openOccasion, setOpenOccasion] = useState(false);
   const [openAge, setOpenAge] = useState(false);
   const [openSex, setOpenSex] = useState(false);
-  const items = [
-    { label: 'Apple', value: 'apple' },
-    { label: 'Banana', value: 'banana' },
-  ];
+
   const [openFamily, setOpenFamily] = useState(false);
   const [formData, setFormData] = useState({});
 
@@ -85,12 +83,11 @@ function RegisterScreen() {
             </TextDefault>
             <DropDownPicker
               listMode="SCROLLVIEW"
-              searchable={false}
               searchPlaceholder="Search..."
               showTickIcon={false}
               open={openOccasion}
               value={formData?.ocassion ?? null}
-              items={items}
+              items={itemsOccasion}
               setOpen={onOccasionOpen}
               setValue={selectionValue => changePickerValue('ocassion', selectionValue())}
               placeholder="Select an Occasion"
@@ -106,6 +103,7 @@ function RegisterScreen() {
                 activeOpacity: 0.7,
               }}
               zIndex={5}
+              searchable={true}
             />
             <TextDefault bold style={[styles.inputName, Alignment.MTmedium]}>
               Who is the gift for?
@@ -128,7 +126,7 @@ function RegisterScreen() {
                   showTickIcon={false}
                   open={openAge}
                   value={formData?.age ?? null}
-                  items={items}
+                  items={itemsAge}
                   setOpen={onAgeOpen}
                   setValue={selectionValue => changePickerValue('age', selectionValue())}
                   placeholder="Select Age"
@@ -142,6 +140,7 @@ function RegisterScreen() {
                     activeOpacity: 0.7,
                   }}
                   zIndex={4}
+                  searchable={true}
                 />
               </View>
               <View style={{ flex: 1 / 2.2 }}>
@@ -153,7 +152,7 @@ function RegisterScreen() {
                   showTickIcon={false}
                   open={openSex}
                   value={formData?.sex ?? null}
-                  items={items}
+                  items={itemsSex}
                   setOpen={onSexOpen}
                   setValue={selectionValue => changePickerValue('sex', selectionValue())}
                   placeholder="Select Sex"
@@ -167,6 +166,7 @@ function RegisterScreen() {
                     activeOpacity: 0.7,
                   }}
                   zIndex={4}
+                  searchable={true}
                 />
               </View>
             </View>
@@ -178,7 +178,7 @@ function RegisterScreen() {
               showTickIcon={false}
               open={openFamily}
               value={formData?.family ?? null}
-              items={items}
+              items={itemsFamily}
               setOpen={onFamilyOpen}
               placeholder="Select Family Status"
               setValue={selectionValue => changePickerValue('family', selectionValue())}
@@ -192,6 +192,7 @@ function RegisterScreen() {
                 activeOpacity: 0.7,
               }}
               zIndex={3}
+              searchable={true}
             />
             <ColoredButton
               title={'Next'}

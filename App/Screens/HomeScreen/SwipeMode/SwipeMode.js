@@ -1,50 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useCallback, useMemo, useState } from 'react';
-import { ScrollView, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, TouchableOpacity, View } from 'react-native';
 import DislikeIcon from '../../../Assest/Svg/DislikeIcon';
 import LikeIcon from '../../../Assest/Svg/LikeIcon';
 import { ColoredButton, MainWrapper, TextDefault } from '../../../Components';
+import { openLink } from '../../../Config/CustomFunction';
+import { ITEM_LIST } from '../../../Config/MockData';
 import { Alignment } from '../../../Theme';
 import styles from './styles';
-
-const DATA_LIST = [
-  {
-    id: 0,
-    title: 'Product Title1',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 1,
-    title: 'Product Title2',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 2,
-    title: 'Product Title3',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 3,
-    title: 'Product Title4',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 4,
-    title: 'Product Title5',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-  {
-    id: 5,
-    title: 'Product Title6',
-    img: '',
-    description: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.',
-  },
-];
 function SwipeMode() {
   const [currentCard, setCurrentCard] = useState(0);
   const navigation = useNavigation();
@@ -68,8 +31,10 @@ function SwipeMode() {
   const RenderCard = React.memo(props => {
     return (
       <View style={styles.boxView}>
-        <View style={styles.imgView}>{/* <Image /> */}</View>
-        <TextDefault numberOfLines={1} center H4 bold style={styles.title}>
+        <View style={styles.imgView}>
+          <Image source={props.image} resizeMode="contain" style={styles.responsiveImage} />
+        </View>
+        <TextDefault numberOfLines={2} center H5 bold style={styles.title}>
           {props.title}
         </TextDefault>
         <View style={styles.actionRow}>
@@ -86,13 +51,18 @@ function SwipeMode() {
             </TextDefault>
           </TouchableOpacity>
         </View>
-        <ColoredButton title={'View on Amazon'} viewProps={styles.btnView} textprops={styles.btnText} />
+        <ColoredButton
+          title={'View on Amazon'}
+          viewProps={styles.btnView}
+          textprops={styles.btnText}
+          onPress={() => openLink(props.link)}
+        />
       </View>
     );
   });
 
   const cardStack = useCallback(() => {
-    return DATA_LIST.map((item, index) => {
+    return ITEM_LIST.map((item, index) => {
       if (index < currentCard) {
         return null;
       }

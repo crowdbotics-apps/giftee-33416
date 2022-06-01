@@ -37,6 +37,12 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     borderRadius: 15,
     backgroundColor: COLORS.white,
+    overflow: 'hidden',
+  },
+  responsiveImage: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
   },
   title: {
     color: COLORS.seconday,

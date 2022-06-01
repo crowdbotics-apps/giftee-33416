@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react';
-import { FlatList, useWindowDimensions, View } from 'react-native';
+import { FlatList, Image, useWindowDimensions, View } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HeartIcon from '../../../Assest/Svg/HeartIcon';
 import TrashIcon from '../../../Assest/Svg/TrashIcon';
+import { openLink } from '../../../Config/CustomFunction';
 import { COLORS } from '../../../Theme';
 import { ColoredButton } from '../../Buttons';
 import { TextDefault } from '../../Text';
@@ -44,7 +45,9 @@ function GridList({ flatListProps, isHistory = false }) {
             <BorderlessButton style={styles.trashBtn} rippleColor={COLORS.rippleColor} activeOpacity={0.5}>
               {isHistory ? <HeartIcon /> : <TrashIcon />}
             </BorderlessButton>
-            <View style={styles.imgView}>{/* <Image /> */}</View>
+            <View style={styles.imgView}>
+              <Image source={item.image} resizeMode="contain" style={styles.responsiveImage} />
+            </View>
             <TextDefault numberOfLines={1} center terms medium style={styles.title}>
               {item.title}
             </TextDefault>
@@ -58,6 +61,7 @@ function GridList({ flatListProps, isHistory = false }) {
               viewProps={styles.btnView}
               textprops={styles.btnText}
               textView={styles.btnTextView}
+              onPress={() => openLink(item.link)}
             />
           </View>
         );

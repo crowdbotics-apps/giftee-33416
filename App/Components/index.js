@@ -7,3 +7,4 @@ export * from './Spinner';
 export * from './TabBar';
 export * from './Text';
 export * from './Wrapper';
+export * from './Dropdown';
