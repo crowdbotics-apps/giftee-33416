@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     width: 100,
   },
   fieldBox: {
-    flexGrow: 1,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
   },
   inputName: {
     color: COLORS.seconday,
