@@ -132,104 +132,14 @@ function RegisterScreen() {
                 </View>
               );
             })}
-
-            {/* <TextDefault bold style={[styles.inputName, Alignment.MTmedium]}>
-              Who is the gift for?
-            </TextDefault>
-            <TextInput
-              style={[styles.inputContainerStyle, styles.dropdownView]}
-              placeholder="John Doe"
-              placeholderTextColor={'rgba(57, 60, 77, 0.4)'}
-              returnKeyType="done"
-              autoComplete="name"
-              onChangeText={e => changePickerValue('name', e)}
-            />
-            <View style={[styles.inputRow, Alignment.MTmedium, !isAndroid && { zIndex: 4 }]}>
-              <View style={{ flex: 1 / 2.2 }}>
-                <TextDefault bold style={styles.inputName}>
-                  Age range?
-                </TextDefault>
-                <DropDownPicker
-                  listMode="SCROLLVIEW"
-                  showTickIcon={false}
-                  open={openAge}
-                  value={formData?.age ?? null}
-                  items={itemsAge}
-                  setOpen={onAgeOpen}
-                  setValue={selectionValue => changePickerValue('age', selectionValue())}
-                  placeholder="Select Age"
-                  dropDownContainerStyle={[styles.dropdownView, Alignment.PBsmall]}
-                  style={[styles.inputContainerStyle, styles.dropdownView]}
-                  placeholderStyle={styles.placeholderStyle}
-                  listItemContainerStyle={Alignment.MHsmall}
-                  selectedItemContainerStyle={styles.selectedItem}
-                  selectedItemLabelStyle={styles.selectedLabel}
-                  props={{
-                    activeOpacity: 0.7,
-                  }}
-                  zIndex={4}
-                  searchable={true}
-                />
-              </View>
-              <View style={{ flex: 1 / 2.2 }}>
-                <TextDefault bold style={styles.inputName}>
-                  Sex type?
-                </TextDefault>
-                <DropDownPicker
-                  listMode="SCROLLVIEW"
-                  showTickIcon={false}
-                  open={openSex}
-                  value={formData?.sex ?? null}
-                  items={itemsSex}
-                  setOpen={onSexOpen}
-                  setValue={selectionValue => changePickerValue('sex', selectionValue())}
-                  placeholder="Select Sex"
-                  dropDownContainerStyle={[styles.dropdownView, Alignment.PBsmall]}
-                  style={[styles.inputContainerStyle, styles.dropdownView]}
-                  placeholderStyle={styles.placeholderStyle}
-                  listItemContainerStyle={Alignment.MHsmall}
-                  selectedItemContainerStyle={styles.selectedItem}
-                  selectedItemLabelStyle={styles.selectedLabel}
-                  props={{
-                    activeOpacity: 0.7,
-                  }}
-                  zIndex={4}
-                  searchable={true}
-                />
-              </View>
-            </View>
-            <TextDefault bold style={[styles.inputName, Alignment.MTmedium]}>
-              Family status?
-            </TextDefault>
-            <DropDownPicker
-              listMode="SCROLLVIEW"
-              showTickIcon={false}
-              open={openFamily}
-              value={formData?.family ?? null}
-              items={itemsFamily}
-              setOpen={onFamilyOpen}
-              placeholder="Select Family Status"
-              setValue={selectionValue => changePickerValue('family', selectionValue())}
-              dropDownContainerStyle={[styles.dropdownView, Alignment.PBsmall]}
-              style={[styles.inputContainerStyle, styles.dropdownView]}
-              placeholderStyle={styles.placeholderStyle}
-              listItemContainerStyle={Alignment.MHsmall}
-              selectedItemContainerStyle={styles.selectedItem}
-              selectedItemLabelStyle={styles.selectedLabel}
-              props={{
-                activeOpacity: 0.7,
-              }}
-              zIndex={3}
-              searchable={true}
-            /> */}
-            <ColoredButton
-              title={'Next'}
-              spinner={false}
-              disabled={!(formData?.sex && formData?.name)}
-              viewProps={[Alignment.MVxLarge, { width: '50%', alignSelf: 'center' }]}
-              onPress={() => navigation.navigate(NAVIGATION_SCREEN.AdditionalRegister)}
-            />
           </View>
+          <ColoredButton
+            title={'Next'}
+            spinner={false}
+            disabled={!(formData?.sex && formData?.name)}
+            viewProps={[Alignment.MVxLarge, { width: '50%', alignSelf: 'center' }]}
+            onPress={() => navigation.navigate(NAVIGATION_SCREEN.AdditionalRegister)}
+          />
         </View>
       </KeyboardAwareScrollView>
       <View style={styles.bottomIcon}>
