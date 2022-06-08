@@ -55,14 +55,14 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = giftee_33416/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90E440D4BC50478FB965F55D /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		932E589359E340E1BE85628B /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		99DBDFFF55544C71B513C199 /* Gotham Rounded-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Bold.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Bold.ttf"; sourceTree = "<group>"; };
+		99DBDFFF55544C71B513C199 /* Gotham Rounded-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Bold.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Bold.ttf"; sourceTree = "<group>"; };
 		9FF919A3EB11A1B5B7251614 /* Pods-giftee_33416.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftee_33416.release.xcconfig"; path = "Target Support Files/Pods-giftee_33416/Pods-giftee_33416.release.xcconfig"; sourceTree = "<group>"; };
 		A9DF960049F9720B50E73D6D /* Pods-giftee_33416-giftee_33416Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giftee_33416-giftee_33416Tests.debug.xcconfig"; path = "Target Support Files/Pods-giftee_33416-giftee_33416Tests/Pods-giftee_33416-giftee_33416Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE49C3686FCE47988983872F /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		B882836212714958BD066CA2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		BC16EDCAC6DC4FACA5D0FD6C /* Gotham Rounded-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Book.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Book.ttf"; sourceTree = "<group>"; };
-		BC7114E3E00D4606A9CF28A4 /* Gotham Rounded-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Light.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Light.ttf"; sourceTree = "<group>"; };
-		CDEBC62464014838ABD0445D /* Gotham Rounded-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Medium.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Medium.ttf"; sourceTree = "<group>"; };
+		BC7114E3E00D4606A9CF28A4 /* Gotham Rounded-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Light.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Light.ttf"; sourceTree = "<group>"; };
+		CDEBC62464014838ABD0445D /* Gotham Rounded-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Gotham Rounded-Medium.ttf"; path = "../App/Assest/Fonts/Gotham Rounded-Medium.ttf"; sourceTree = "<group>"; };
 		E31B4542C4BB46CA93AB2530 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		E6FC8E7197854057BCD5721D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		E77485CB89154DCCB89B297D /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -507,7 +507,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YKR59QXKM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = giftee_33416/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,8 +521,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdbotics.giftee;
 				PRODUCT_NAME = giftee_33416;
+				PROVISIONING_PROFILE_SPECIFIER = "Giftee App Profile";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -533,7 +536,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YKR59QXKM;
 				INFOPLIST_FILE = giftee_33416/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,8 +549,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crowdbotics.giftee;
 				PRODUCT_NAME = giftee_33416;
+				PROVISIONING_PROFILE_SPECIFIER = "Giftee App Profile";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
