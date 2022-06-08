@@ -85,7 +85,7 @@ function AdditionalRegister() {
         contentContainerStyle={styles.scrollContent}
         bounces={false}>
         <View style={styles.container}>
-          <View style={styles.fieldBox}>
+          <View style={styles.fieldBoxx}>
             {DropdownList.map((item, index) => {
               return (
                 <>
@@ -117,13 +117,13 @@ function AdditionalRegister() {
               returnKeyType="done"
               autoComplete="name"
             />
-            <ColoredButton
-              title={'Next'}
-              spinner={false}
-              viewProps={[Alignment.MVxLarge, { width: '50%', alignSelf: 'center' }]}
-              onPress={() => setModal(prev => !prev)}
-            />
           </View>
+          <ColoredButton
+            title={'Next'}
+            spinner={false}
+            viewProps={[Alignment.MVxLarge, { width: '50%', alignSelf: 'center' }]}
+            onPress={() => setModal(prev => !prev)}
+          />
         </View>
       </KeyboardAwareScrollView>
       <View style={styles.bottomIcon}>
