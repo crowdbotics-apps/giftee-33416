@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
   },
+  fieldBoxx: {
+    width: '100%',
+  },
   inputName: {
     color: COLORS.seconday,
     marginTop: 10,
