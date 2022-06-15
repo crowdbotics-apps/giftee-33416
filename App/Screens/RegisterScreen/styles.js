@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { Alignment, COLORS } from '../../Theme';
+import { scale } from '../../Config/CustomFunction';
+import { Alignment, COLORS, Fonts } from '../../Theme';
 
 const styles = StyleSheet.create({
   flex: {
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     right: -30,
     top: -20,
     alignSelf: 'center',
-    width: 100,
+    width: scale(80),
   },
   fieldBox: {
     flexWrap: 'wrap',
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
   inputName: {
     color: COLORS.seconday,
     marginTop: 10,
+    ...Fonts.style.link,
   },
   inputRow: {
     flexDirection: 'row',
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 15,
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
+    color: COLORS.primaryText,
     ...Alignment.MTsmall,
   },
   placeholderStyle: {

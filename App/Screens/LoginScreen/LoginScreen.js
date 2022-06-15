@@ -17,7 +17,7 @@ function LoginScreen() {
   return (
     <MainWrapper headerTitle="Sign In" leftIcon={ICONS_NAME.BACK}>
       <ScrollView style={styles.flex} contentContainerStyle={styles.scrollContent}>
-        <TextDefault description center style={Alignment.MBxLarge}>
+        <TextDefault terms center style={Alignment.MBxLarge}>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint{' '}
         </TextDefault>
 
@@ -28,7 +28,7 @@ function LoginScreen() {
             </View>
           </TouchableOpacity>
           <View style={[styles.row, styles.conditionView]}>
-            <TextDefault description style={Alignment.MRxSmall}>
+            <TextDefault terms style={Alignment.MRxSmall}>
               {'Agree to'}
             </TextDefault>
             <LinkButton
@@ -38,7 +38,7 @@ function LoginScreen() {
               textprops={styles.registerText}
               onPress={() => navigation.navigate(NAVIGATION_SCREEN.termScreen, { headerIcon: ICONS_NAME.BACK })}
             />
-            <TextDefault description>{' and '}</TextDefault>
+            <TextDefault terms>{' and '}</TextDefault>
             <LinkButton
               title={'Privacy Policy.'}
               disabled={false}

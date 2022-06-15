@@ -36,9 +36,11 @@ function FilterScreen() {
             viewProps={styles.addBtn}
             textView={Alignment.PHmedium}
             onPress={() => {
-              console.tron.warn?.({ a: nameRef.current?.value });
-              setFilters(prev => [...prev, nameRef.current?.value]);
-              nameRef.current?.clear?.();
+              if (nameRef.current?.value) {
+                setFilters(prev => [...prev, nameRef.current?.value]);
+                nameRef.current.value = '';
+                nameRef.current?.clear?.();
+              }
             }}
           />
         </View>

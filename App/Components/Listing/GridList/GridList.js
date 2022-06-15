@@ -4,7 +4,7 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HeartIcon from '../../../Assest/Svg/HeartIcon';
 import TrashIcon from '../../../Assest/Svg/TrashIcon';
-import { openLink } from '../../../Config/CustomFunction';
+import { openLink, scale } from '../../../Config/CustomFunction';
 import { COLORS } from '../../../Theme';
 import { ColoredButton } from '../../Buttons';
 import { TextDefault } from '../../Text';
@@ -43,16 +43,16 @@ function GridList({ flatListProps, isHistory = false }) {
         return (
           <View style={[styles.flex, styles.boxView]}>
             <BorderlessButton style={styles.trashBtn} rippleColor={COLORS.rippleColor} activeOpacity={0.5}>
-              {isHistory ? <HeartIcon /> : <TrashIcon />}
+              {isHistory ? <HeartIcon color={COLORS.seconday} /> : <TrashIcon color={COLORS.seconday} />}
             </BorderlessButton>
             <View style={styles.imgView}>
               <Image source={item.image} resizeMode="contain" style={styles.responsiveImage} />
             </View>
-            <TextDefault numberOfLines={1} center terms medium style={styles.title}>
+            <TextDefault numberOfLines={1} center small medium style={styles.title}>
               {item.title}
             </TextDefault>
             {!isHistory && (
-              <TextDefault numberOfLines={3} center extraSmall>
+              <TextDefault numberOfLines={3} center style={{ fontSize: scale(10) }}>
                 {item.description}
               </TextDefault>
             )}

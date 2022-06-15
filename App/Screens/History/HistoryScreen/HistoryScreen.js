@@ -16,21 +16,25 @@ const DATA_LIST = [
     id: 0,
     date: '21 March, 22',
     title: 'Gift for ',
+    to: 'Jon',
   },
   {
     id: 1,
-    date: '21 March, 22',
+    date: '30 March, 22',
     title: 'Gift for ',
+    to: 'Nicole',
   },
   {
     id: 2,
-    date: '21 March, 22',
+    date: '12 April, 22',
     title: 'Gift for ',
+    to: 'David',
   },
   {
     id: 3,
-    date: '21 March, 22',
+    date: '15 May, 22',
     title: 'Gift for ',
+    to: 'Sophia',
   },
 ];
 
@@ -80,7 +84,7 @@ function HistoryScreen() {
                 <TextDefault bold H5 style={[Alignment.MTxSmall, { fontFamily: FONTS_NAME.AbrilFatface.bold }]}>
                   {item.title}
                   <TextDefault bold H5 style={styles.blueText}>
-                    Jon
+                    {item.to}
                   </TextDefault>
                 </TextDefault>
               </View>

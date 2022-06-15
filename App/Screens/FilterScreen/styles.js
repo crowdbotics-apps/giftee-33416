@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   },
   inputText: {
     flex: 1,
+    color: COLORS.primaryText,
   },
   addBtn: {
     height: '90%',

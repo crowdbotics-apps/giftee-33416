@@ -6,7 +6,7 @@ import LikeIcon from '../../../Assest/Svg/LikeIcon';
 import { ColoredButton, MainWrapper, TextDefault } from '../../../Components';
 import { openLink } from '../../../Config/CustomFunction';
 import { ITEM_LIST } from '../../../Config/MockData';
-import { Alignment } from '../../../Theme';
+import { Alignment, COLORS } from '../../../Theme';
 import styles from './styles';
 function SwipeMode() {
   const [currentCard, setCurrentCard] = useState(0);
@@ -34,19 +34,19 @@ function SwipeMode() {
         <View style={styles.imgView}>
           <Image source={props.image} resizeMode="contain" style={styles.responsiveImage} />
         </View>
-        <TextDefault numberOfLines={2} center H5 bold style={styles.title}>
+        <TextDefault numberOfLines={2} center bold style={styles.title}>
           {props.title}
         </TextDefault>
         <View style={styles.actionRow}>
           <TouchableOpacity style={styles.actionBtn} onPress={changeCard}>
-            <DislikeIcon />
-            <TextDefault link center medium style={[styles.errorText, Alignment.MTxSmall]}>
+            <DislikeIcon color={'#01497C'} />
+            <TextDefault description center medium style={[styles.errorText, Alignment.MTxSmall]}>
               Dislike
             </TextDefault>
           </TouchableOpacity>
           <TouchableOpacity style={styles.actionBtn} onPress={changeCard}>
-            <LikeIcon />
-            <TextDefault link center medium style={[styles.successText, Alignment.MTxSmall]}>
+            <LikeIcon color={COLORS.seconday} />
+            <TextDefault description center medium style={[styles.successText, Alignment.MTxSmall]}>
               Like
             </TextDefault>
           </TouchableOpacity>

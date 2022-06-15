@@ -88,7 +88,7 @@ function AdditionalRegister() {
           <View style={styles.fieldBoxx}>
             {DropdownList.map((item, index) => {
               return (
-                <>
+                <React.Fragment key={index}>
                   <TextDefault bold style={styles.inputName}>
                     {item.title}
                   </TextDefault>
@@ -102,7 +102,7 @@ function AdditionalRegister() {
                     zIndex={DropdownList.length - index}
                     searchable={true}
                   />
-                </>
+                </React.Fragment>
               );
             })}
 

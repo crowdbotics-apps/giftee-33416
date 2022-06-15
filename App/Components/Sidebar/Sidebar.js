@@ -9,7 +9,7 @@ import { MODAL_TYPE, SIDE_MENU } from '../../Config/NavigationConstant';
 import { RootNavigation } from '../../Navigation/NavigationService';
 import { COLORS } from '../../Theme';
 import { FONTS_NAME } from '../../Theme/Fonts';
-import { SaveResultModal } from '../Modal';
+import { FeedbackModal, SaveResultModal } from '../Modal';
 import { TextDefault } from '../Text';
 import styles from './styles';
 
@@ -19,6 +19,7 @@ function Sidebar(props) {
   const inset = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const [gifteeModal, setGifteeModal] = useState(false);
+  const [feedbackModal, setFeedbackModal] = useState(false);
 
   const headerViewStyle = useAnimatedStyle(() => {
     const scale = interpolate(progress.value, [0, 1], [0, 1], Extrapolate.CLAMP);
@@ -46,7 +47,7 @@ function Sidebar(props) {
           ]}>
           <Ionicons name="close" size={25} color={COLORS.white} />
         </Pressable>
-        <TextDefault H3 bold style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
+        <TextDefault H4 bold style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
           Menu
         </TextDefault>
       </Animated.View>
@@ -62,7 +63,7 @@ function Sidebar(props) {
               inactiveTintColor={COLORS.white}
               focused={navigationName === item.navigateTo}
               label={labelProps => (
-                <TextDefault medium style={[{ color: labelProps.color }, styles.flex]}>
+                <TextDefault description medium style={[{ color: labelProps.color }, styles.flex]}>
                   {item.title}
                 </TextDefault>
               )}
@@ -73,6 +74,9 @@ function Sidebar(props) {
                   switch (item.modal) {
                     case MODAL_TYPE.GIFTEE:
                       setGifteeModal(true);
+                      break;
+                    case MODAL_TYPE.FEEDBACK:
+                      setFeedbackModal(true);
                       break;
 
                     default:
@@ -89,11 +93,12 @@ function Sidebar(props) {
         </Animated.View>
       </DrawerContentScrollView>
       <Animated.View style={[styles.headerView, { marginBottom: inset.bottom, width: width }, headerViewStyle]}>
-        <TextDefault H3 bold style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
+        <TextDefault H4 bold style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
           Giftee
         </TextDefault>
       </Animated.View>
       <SaveResultModal modalVisible={gifteeModal} hideModal={() => setGifteeModal(prev => !prev)} />
+      <FeedbackModal modalVisible={feedbackModal} hideModal={() => setFeedbackModal(prev => !prev)} />
     </React.Fragment>
   );
 }
