@@ -9,7 +9,7 @@ import styles from './styles';
 function TabLabel({ title = '', icon = '', ...option }) {
   return (
     <View style={[styles.row, styles.center]}>
-      <TextDefault medium link style={[Alignment.PHsmall, option.focused ? styles.activeColor : styles.inActiveColor]}>
+      <TextDefault medium terms style={[Alignment.PHsmall, option.focused ? styles.activeColor : styles.inActiveColor]}>
         {title}
       </TextDefault>
       {title === 'Swipe Mode' ? (

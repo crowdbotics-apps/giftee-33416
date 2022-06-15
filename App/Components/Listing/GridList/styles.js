@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { scale } from '../../../Config/CustomFunction';
 import { Alignment, COLORS } from '../../../Theme';
 import Fonts, { fontFamily } from '../../../Theme/Fonts';
 
@@ -58,11 +59,12 @@ const styles = StyleSheet.create({
     ...Alignment.MBxSmall,
   },
   btnTextView: {
-    ...Alignment.Psmall,
+    flex: 1,
+    ...Alignment.PHxSmall,
   },
   btnText: {
     ...fontFamily.Medium,
-    ...Fonts.style.small,
+    ...Fonts.style.extraSmall,
     paddingHorizontal: 0,
   },
 });

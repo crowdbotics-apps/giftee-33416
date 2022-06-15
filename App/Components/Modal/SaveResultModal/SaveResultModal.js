@@ -40,7 +40,7 @@ function SaveResultModal(props) {
         <View style={styles.viewContainer}>
           <View style={styles.infoContainer}>
             <View style={styles.headerTitleBox}>
-              <TextDefault H5 medium center style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
+              <TextDefault medium center style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
                 Save results?
               </TextDefault>
             </View>

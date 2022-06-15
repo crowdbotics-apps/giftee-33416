@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { scale } from '../../Config/CustomFunction';
 import { Alignment, COLORS } from '../../Theme';
 import { FONTS_NAME } from '../../Theme/Fonts';
 
@@ -13,12 +14,20 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: 'transparent',
     ...Alignment.PHxLarge,
-    marginTop: 150,
   },
   title: {
     ...Alignment.MVxLarge,
     fontFamily: FONTS_NAME.AbrilFatface.bold,
-    fontSize: 80,
+    fontSize: scale(65),
+  },
+  btnView: {
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+    height: scale(30),
+    aspectRatio: 1.5 / 1,
+    borderRadius: scale(10),
+    alignSelf: 'flex-end',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   blueText: {
     color: COLORS.seconday,

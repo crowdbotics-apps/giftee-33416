@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   },
   btnText: {
     ...fontFamily.Bold,
-    ...Fonts.style.h6,
+    ...Fonts.style.link,
     paddingHorizontal: 0,
   },
   errorText: {

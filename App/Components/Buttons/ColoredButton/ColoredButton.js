@@ -40,7 +40,7 @@ function ColoredButton({
               </View>
             )}
             <View style={[styles.titleView, textView]}>
-              <TextDefault medium style={[Alignment.PHxSmall, styles.buttonText, textprops]}>
+              <TextDefault description medium style={[Alignment.PHxSmall, styles.buttonText, textprops]}>
                 {title}
               </TextDefault>
             </View>

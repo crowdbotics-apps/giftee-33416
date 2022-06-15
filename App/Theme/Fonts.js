@@ -1,4 +1,5 @@
 import { Platform } from 'react-native';
+import { scale } from '../Config/CustomFunction';
 
 const __ANDROID__ = Platform.OS === 'android';
 
@@ -22,17 +23,17 @@ export const FONTS_NAME = {
   },
 };
 const size = {
-  h1: 38,
-  h2: 34,
-  h3: 30,
-  h4: 25,
-  h5: 20,
-  h6: 19,
-  input: 18,
-  regular: 17,
-  medium: 14,
-  small: 12,
-  tiny: 8.5,
+  h1: scale(38),
+  h2: scale(34),
+  h3: scale(30),
+  h4: scale(25),
+  h5: scale(20),
+  h6: scale(19),
+  input: scale(18),
+  regular: scale(17),
+  medium: scale(14),
+  small: scale(12),
+  tiny: scale(8.5),
 };
 
 const style = {
@@ -58,10 +59,10 @@ const style = {
     fontSize: size.regular,
   },
   link: {
-    fontSize: 15,
+    fontSize: scale(15),
   },
   terms: {
-    fontSize: 13,
+    fontSize: scale(13),
   },
   description: {
     fontSize: size.medium,
@@ -70,7 +71,7 @@ const style = {
     fontSize: size.small,
   },
   extraSmall: {
-    fontSize: 11,
+    fontSize: scale(11),
   },
   tiny: {
     fontSize: size.tiny,

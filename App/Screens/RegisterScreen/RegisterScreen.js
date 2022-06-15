@@ -85,10 +85,10 @@ function RegisterScreen() {
         <View style={styles.container}>
           <View style={styles.headerBox}>
             <View style={styles.leftHeader}>
-              <TextDefault H3 bold numberOfLines={1} style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
+              <TextDefault H4 bold numberOfLines={1} style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
                 Let’s get started!
               </TextDefault>
-              <TextDefault light link style={Alignment.MTmedium}>
+              <TextDefault light description style={Alignment.MTmedium}>
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint
               </TextDefault>
             </View>

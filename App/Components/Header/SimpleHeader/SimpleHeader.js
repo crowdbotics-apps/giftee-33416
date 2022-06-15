@@ -25,7 +25,7 @@ function SimpleHeader({ headerTitle, leftIcon = '', leftButtonStyle, backAction 
         },
       ]}>
       <View style={[styles.headerRow]}>
-        <TextDefault H4 bold numberOfLines={1} style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
+        <TextDefault H5 bold numberOfLines={1} style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
           {headerTitle}
         </TextDefault>
         <View style={styles.buttonContainer}>

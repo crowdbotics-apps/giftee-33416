@@ -34,7 +34,7 @@ function SignupModal(props) {
             <CloseIcon color={COLORS.primaryText} />
           </TouchableOpacity>
           <View style={styles.headerTitleBox}>
-            <TextDefault H5 medium center style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
+            <TextDefault medium center style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
               Your registry won’t be saved if you do not Sign Up
             </TextDefault>
           </View>

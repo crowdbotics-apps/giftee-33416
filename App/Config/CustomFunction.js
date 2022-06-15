@@ -1,4 +1,8 @@
-import { Alert, Linking } from 'react-native';
+import { Alert, Dimensions, Linking } from 'react-native';
+const { width } = Dimensions.get('window');
+
+//Guideline sizes are based on standard ~5" screen mobile device
+const guidelineBaseWidth = 350;
 
 export async function openLink(actualURL) {
   try {
@@ -12,3 +16,5 @@ export async function openLink(actualURL) {
     Alert.alert('Service is not availble on this device.');
   }
 }
+
+export const scale = size => (width / guidelineBaseWidth) * size;

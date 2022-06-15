@@ -17,6 +17,7 @@ const ICONS_NAME = {
 const MODAL_TYPE = {
   GIFTEE: 'GIFTEE',
   SHARE: 'SHARE',
+  FEEDBACK: 'FEEDBACK',
 };
 
 const NAVIGATION_SCREEN = {
@@ -56,13 +57,14 @@ const SIDE_MENU = [
     id: 2,
     title: 'Feedback',
     icon: props => <ThumbIcon {...props} />,
+    modal: MODAL_TYPE.FEEDBACK,
     navigateTo: NAVIGATION_SCREEN.homeScreen,
   },
   {
     id: 3,
     title: 'Login',
     icon: props => <UserPlusIcon {...props} />,
-    navigateTo: NAVIGATION_SCREEN.loginScreen,
+    // navigateTo: NAVIGATION_SCREEN.loginScreen,
   },
   {
     id: 4,
