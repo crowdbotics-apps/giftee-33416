@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(58, 60, 73, 0.5)',
   },
   viewContainer: {
-    width: '75%',
+    width: '90%',
     borderRadius: 15,
     overflow: 'hidden',
     justifyContent: 'space-between',

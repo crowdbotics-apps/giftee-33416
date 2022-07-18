@@ -49,6 +49,8 @@ function SaveResultModal(props) {
                 title={'Save'}
                 spinner={false}
                 viewProps={[{ width: '40%', alignSelf: 'center' }]}
+                textView={Alignment.PHxSmall}
+                textprops={styles.saveBtnText}
                 onPress={() => {
                   if (isLoggedIn) {
                     navigateToGiftee();

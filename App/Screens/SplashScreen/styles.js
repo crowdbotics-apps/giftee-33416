@@ -15,10 +15,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     ...Alignment.PHxLarge,
   },
-  title: {
-    ...Alignment.MVxLarge,
-    fontFamily: FONTS_NAME.AbrilFatface.bold,
-    fontSize: scale(65),
+  imgView: {
+    width: '100%',
+    height: scale(200),
+    alignSelf: 'center',
+    justifyContent: 'center',
+  },
+  responsiveImg: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
   },
   btnView: {
     backgroundColor: 'rgba(255, 255, 255, 0.6)',
@@ -32,7 +38,6 @@ const styles = StyleSheet.create({
   blueText: {
     color: COLORS.seconday,
     ...Alignment.MVmedium,
-    ...Alignment.MTxLarge,
   },
   bottomImage: {
     position: 'absolute',

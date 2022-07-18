@@ -5,23 +5,21 @@ import { Alignment, COLORS } from 'theme';
 
 const Dropdown = props => {
   return (
-    <>
-      <DropDownPicker
-        listMode="SCROLLVIEW"
-        showTickIcon={false}
-        placeholder="Select Item"
-        dropDownContainerStyle={[styles.dropdownView, Alignment.PBsmall]}
-        style={[styles.inputContainerStyle, styles.dropdownView]}
-        placeholderStyle={styles.placeholderStyle}
-        listItemContainerStyle={Alignment.MHsmall}
-        selectedItemContainerStyle={styles.selectedItem}
-        selectedItemLabelStyle={styles.selectedLabel}
-        props={{
-          activeOpacity: 0.7,
-        }}
-        {...props}
-      />
-    </>
+    <DropDownPicker
+      listMode="SCROLLVIEW"
+      showTickIcon={false}
+      placeholder="Select Item"
+      dropDownContainerStyle={[styles.dropdownView, Alignment.PBsmall]}
+      style={[styles.inputContainerStyle, styles.dropdownView]}
+      placeholderStyle={styles.placeholderStyle}
+      listItemContainerStyle={Alignment.MHsmall}
+      selectedItemContainerStyle={styles.selectedItem}
+      selectedItemLabelStyle={styles.selectedLabel}
+      props={{
+        activeOpacity: 0.7,
+      }}
+      {...props}
+    />
   );
 };
 

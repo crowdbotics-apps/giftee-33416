@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigation } from '@react-navigation/native';
 import React, { useCallback } from 'react';
-import { TouchableOpacity, View } from 'react-native';
-
+import { Image, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Splash1 from '../../Assest/Svg/Splash1';
@@ -27,9 +27,9 @@ function SplashScreen() {
           <Ionicons name="arrow-forward-sharp" color={COLORS.error} size={scale(18)} />
         </TouchableOpacity>
         <View style={{ marginTop: '10%' }}>
-          <TextDefault bold center style={styles.title}>
-            Giftee
-          </TextDefault>
+          <View style={styles.imgView}>
+            <Image source={require('../../Assest/Images/Logo.png')} style={styles.responsiveImg} />
+          </View>
           <TextDefault H5 medium center style={styles.blueText}>
             Lorem Ipsum
           </TextDefault>

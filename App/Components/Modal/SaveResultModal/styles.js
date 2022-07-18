@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { Alignment, COLORS } from '../../../Theme';
+import { Alignment, COLORS, Fonts } from '../../../Theme';
 const { width } = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(58, 60, 73, 0.5)',
   },
   viewContainer: {
-    width: '75%',
+    width: '90%',
     borderRadius: 15,
     overflow: 'hidden',
     justifyContent: 'space-between',
@@ -46,9 +46,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.error,
   },
+  saveBtnText: {
+    paddingHorizontal: 0,
+    ...Fonts.style.terms,
+  },
   cancelBtnText: {
     color: COLORS.error,
     paddingHorizontal: 0,
+    ...Fonts.style.terms,
   },
 });
 
