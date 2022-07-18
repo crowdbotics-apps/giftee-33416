@@ -6,20 +6,16 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CutGift from '../../Assest/Svg/CutGift';
 import { ColoredButton, TextDefault } from '../../Components';
+import Dropdown from '../../Components/Dropdown';
 import { NAVIGATION_SCREEN } from '../../Config/NavigationConstant';
 import { Alignment } from '../../Theme';
 import { FONTS_NAME } from '../../Theme/Fonts';
-import { itemsOccasion, itemsAge, itemsSex, itemsFamily } from './data';
-import Dropdown from '../../Components/Dropdown';
-// import { Alignment } from '../../Theme';
+import { itemsAge, itemsFamily, itemsOccasion, itemsSex } from './data';
 import styles from './styles';
-
-const isAndroid = Platform.OS === 'android';
 
 function RegisterScreen() {
   const navigation = useNavigation();
   const [formData, setFormData] = useState({});
-
   const [dropdowdOpen, setDropdownOpen] = useState('');
 
   const DropdownList = [
@@ -82,7 +78,7 @@ function RegisterScreen() {
         style={[styles.flex, styles.background]}
         contentContainerStyle={styles.scrollContent}
         bounces={false}>
-        <View style={styles.container}>
+        <View style={[styles.container]}>
           <View style={styles.headerBox}>
             <View style={styles.leftHeader}>
               <TextDefault H4 bold numberOfLines={1} style={{ fontFamily: FONTS_NAME.AbrilFatface.bold }}>
@@ -96,14 +92,17 @@ function RegisterScreen() {
               <CutGift />
             </View>
           </View>
-          <View style={styles.fieldBox}>
+          <View style={[styles.fieldBox, { zIndex: Platform.OS === 'android' ? undefined : DropdownList.length * 2 }]}>
             {DropdownList.map((item, index) => {
               const isSex = item.valueField === 'sex';
               const isAge = item.valueField === 'age';
               return (
                 <View
                   key={index}
-                  style={isSex || isAge ? { width: '48%', marginLeft: isSex ? '4%' : 0 } : { width: '100%' }}>
+                  style={[
+                    isSex || isAge ? { width: '48%', marginLeft: isSex ? '4%' : 0 } : { width: '100%' },
+                    { zIndex: Platform.OS === 'android' ? undefined : DropdownList.length - index },
+                  ]}>
                   <TextDefault bold style={styles.inputName}>
                     {item.title}
                   </TextDefault>
